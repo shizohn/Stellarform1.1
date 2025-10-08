@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=1024">
+<title>Submission Confirmation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a35bf1",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#191022",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "futuristic": ["Orbitron", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .bg-space-animation {
+            background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7QZayQjJPKObK7RVo8rthtBPKzT706z3MzgyxoGtHO5tmT5K3A39aEuUUqy8-2rSNd47WZv84hebfI01-p9rDz_XH5c0R5woTzdtdjBMEU00-9XXOBQ736-L_Di9wNh_BKTMETsGHFnhuUmfjcxWcZ_1KjNmTkfq_bf-mXRJ1dHG_5Us1R_AbDDEb2MXu2CTy6I-nPAI7a9MDnuYcESImuqFDcyp_L8ZqeaOVca_CvNe5C0qUGFoZ_tr-acoy4zAGNw81s7lPzwz");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        .bg-space-animation::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .submitted-text {
+            animation: fadeIn 2s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen items-center justify-center overflow-hidden bg-space-animation">
+<div class="text-center">
+<h1 class="submitted-text text-6xl font-black text-white tracking-widest font-futuristic" style="text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #a35bf1, 0 0 40px #a35bf1, 0 0 50px #a35bf1, 0 0 60px #a35bf1, 0 0 70px #a35bf1;">
+            Submitted
+        </h1>
+</div>
+</div>
+
+</body></html>
